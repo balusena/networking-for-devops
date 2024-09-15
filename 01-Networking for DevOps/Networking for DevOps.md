@@ -409,7 +409,7 @@ and gateways further along the network to diagnose the location of connectivity 
 
 When you ping, you receive information back, including the percentage of lost packets and average round-trip latency.
 
-### traceroute
+### 2.traceroute
 
 Sometimes a network is particularly slow, and you need to track the routes of your packets or identify which gateway is 
 causing delays. This can be challenging to do manually, which is where the `traceroute` command comes in handy.
@@ -441,3 +441,38 @@ pinpoint where to focus your troubleshooting efforts.
 **Here’s an example of a report output from a traceroute command. Take a close look at it.**
 
 ![Networking Traceroute](https://github.com/balusena/networking-for-devops/blob/main/01-Networking%20for%20DevOps/traceroute.png)
+
+You may notice that lines 2 and 3 are identical. This is an example of a buggy kernel in the second hop that forwards packets
+with zero TTL – `lbl.csam.arpa`.
+
+As you can see, `traceroute` can provide a lot of really helpful diagnostic information quickly and simply. However, it does
+have limitations. Some networks don’t provide address-to-name translations. When these appear in your report, you have to guess
+the path that packets take across the network. This happens in the report sample above at hop number 6 with IP address 
+128.32.197.4, a router along the NSFNet, which doesn’t provide the named translation.
+
+Overall, though, `traceroute` is a commonly used diagnostic tool and one that you will use often in your DevOps career.
+
+### 3.Telnet
+
+One important caveat to tools like `ping` and `traceroute` is that a server responding to these tools does not necessarily
+mean that it is fully operational.
+
+Imagine you have a virtual machine with an Apache HTTP server running on it. For web pages to load, the Apache daemon needs
+to be up and running. Even if the virtual machine responds to `ping` requests, you won’t be able to load web pages if Apache
+isn’t running.
+
+Conversely, if a server does not respond to `ping`, it’s not necessarily down. Some system administrators configure firewalls
+to drop all `ping` requests, so you might get no response from the server. However, the server behind this firewall can still
+be reachable via other protocols.
+
+Because of these limitations with `traceroute` and `ping`, you may need to test whether a specific protocol allows you to
+establish a network connection. The `telnet` command can help with this.
+
+Historically, `telnet` was used as a command-line interface for accessing remote servers. However, because `telnet` does 
+not encrypt data, it is not secure for remote access and has since been replaced by SSH.
+
+Despite this, `telnet` remains useful for testing whether one host can establish a network connection using a certain protocol.
+
+For example, to test the connection to `google.com` on port 443 using `telnet`, you would use the following command:
+
+![Networking Telnet](https://github.com/balusena/networking-for-devops/blob/main/01-Networking%20for%20DevOps/telnet.png)
