@@ -159,5 +159,17 @@ The table below outlines the most common combination of addresses and netmasks a
 
 ![Networking CIDR ](https://github.com/balusena/networking-for-devops/blob/main/01-Networking%20for%20DevOps/cidr.png)
 
+## 6.Routing
+How do we get a packet of information from a host on one network to a host on another? In one word: **Routing**.
+
+![Networking Routing](https://github.com/balusena/networking-for-devops/blob/main/01-Networking%20for%20DevOps/routing.png)
+
+Think of a route as a path. Different routes lead to different destinations, and they are used depending on the target 
+you’re trying to reach. It’s similar to driving. If your destination is a house in a quiet neighborhood, you’ll take a 
+local road. If you want to go to a mall a few towns over, you may take a state highway. But if you’re planning a cross 
+country road trip, you’ll hop onto the interstate.
+
+Routing works the same way: based on the destination, different routes are chosen to ensure the packet reaches the correct
+location efficiently.
 
 
