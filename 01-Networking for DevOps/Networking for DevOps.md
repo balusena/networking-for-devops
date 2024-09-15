@@ -213,5 +213,41 @@ languages until it reaches its final form.
 
 ![Networking DNS](https://github.com/balusena/networking-for-devops/blob/main/01-Networking%20for%20DevOps/dns.png)
 
+### Domains, Zones, and Delegation
+
+### Domains and Hierarchy
+
+A **domain** is a self-contained network on the internet. Domains can have subdomains, and those subdomains can have their
+own subdomains, creating a hierarchical structure.
+
+To visualize domains, think of a tree structure. At the top of this tree is the DNS root zone, which represents the highest
+level of the DNS hierarchy. This root zone is divided into **Top-Level Domains (TLDs)**, such as `.com`, `.gov`, and `.io`.
+Each TLD represents a domain, and all subdomains under it. For instance, `example.com` is a subdomain of the `.com` domain.
+This hierarchy is akin to folders and subfolders in a file system.
+
+Different organizations manage different domains. For example, ICANN manages the root domain, encompassing all internet 
+domains, while Verisign controls the `.com` domain. Though ICANN oversees the entire tree, Verisign manages a branch of 
+it, specifically the `.com` zone.
+
+### Delegation
+
+**Delegation** allows an organization that owns a domain to transfer control over a subdomain to another entity. This 
+process is facilitated through **Nameserver (NS) records**. When a domain owner delegates a subdomain, they create an 
+NS record to point to the new owner’s nameservers. This record directs all communications related to that domain to the 
+servers of the new organization, effectively making them the domain owner for that subdomain.
+
+#### Example Scenario
+
+1. ICANN operates root nameservers globally.
+2. Verisign sets up its own nameserver and requests ICANN to delegate the `.com` zone to them.
+3. ICANN creates an NS record pointing to Verisign’s nameserver. Now, any query for a `.com` domain is directed to Verisign’s server.
+
+4. You start a company, “Example Ltd,” and wish to register `example.com` within the `.com` zone.
+5. You set up your own nameserver and ask Verisign to delegate control over `example.com` to you.
+6. Verisign creates an NS record that delegates control of `example.com` to “Example Ltd.” You now control the `example.com` domain.
+
+This hierarchical and delegated structure allows for efficient management and organization of domain names across the internet.
+
+![Networking Domains Zones Deligations](https://github.com/balusena/networking-for-devops/blob/main/01-Networking%20for%20DevOps/domains-zones-deligations.png)
 
 
