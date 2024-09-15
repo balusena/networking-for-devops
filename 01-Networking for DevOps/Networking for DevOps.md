@@ -176,4 +176,18 @@ We use tables to help us determine the routes we want to take. This screenshot d
 
 ![Networking Route Table](https://github.com/balusena/networking-for-devops/blob/main/01-Networking%20for%20DevOps/route-table.png)
 
+### Routing Decisions
+
+When making a routing decision, more specific rules are evaluated first:
+
+- **Local Network**: If a packet's destination falls within the range `10.21.0.0/16`, it will remain within the local 
+network (like staying in your neighborhood).
+
+- **Transit Gateway (TGW)**: If the destination is within the range `10.0.0.0/8`, the packet will be sent to the Transit
+Gateway (TGW) interface (similar to taking state highways).
+
+- **Internet Traffic**: If the packet's destination does not match any of the more specific ranges, the widest rule is 
+applied: `0.0.0.0/0`. This indicates internet traffic, and the packet will be redirected to the Network Address Translation
+(NAT) interface (akin to hopping onto the interstate, like I-95!).
+
 
