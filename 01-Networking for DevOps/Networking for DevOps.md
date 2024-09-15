@@ -156,14 +156,7 @@ needs. By decreasing the subnet mask bits by one, you create a network that supp
 
 ### Common IP Addresses and Subnet Masks
 
-| IP Address Range | Subnet Mask   | Host Count |
-|------------------|---------------|------------|
-| 192.168.0.0/24   | 255.255.255.0 | 254        |
-| 192.168.0.0/23   | 255.255.254.0 | 510        |
-| 192.168.0.0/22   | 255.255.252.0 | 1022       |
-
-This table outlines common address ranges, subnet masks, and the number of hosts they support.
-
 ![Networking CIDR ](https://github.com/balusena/networking-for-devops/blob/main/01-Networking%20for%20DevOps/cidr.png)
 
+The table below outlines the most common combination of addresses and netmasks and important details about them.
 
