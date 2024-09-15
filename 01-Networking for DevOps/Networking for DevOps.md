@@ -257,6 +257,9 @@ associated with the domain and instructions on how to handle queries. Each DNS r
 setting, which determines how frequently a DNS server should refresh the record.
 
 ### Common DNS Record Types
+Below are the most commonly used types of DNS records and their meaning.
+
+![Networking DNS Record Types](https://github.com/balusena/networking-for-devops/blob/main/01-Networking%20for%20DevOps/dns-record-types.png)
 
 - **A (Address) Record**: Maps a domain name to an IPv4 address. For example, `example.com` might have an A record pointing
 to `192.0.2.1`.
@@ -281,8 +284,6 @@ domain administrator’s email, the domain’s serial number, and refresh timing
 
 - **TXT (Text) Record**: Allows for arbitrary text data to be associated with a domain. Commonly used for verification purposes
 and to hold SPF (Sender Policy Framework) data for email authentication.
-
-![Networking DNS Record Types](https://github.com/balusena/networking-for-devops/blob/main/01-Networking%20for%20DevOps/dns-record-types.png)
 
 Each type of DNS record serves a specific purpose and is essential for the proper functioning and management of domains 
 on the internet.
