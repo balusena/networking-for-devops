@@ -70,7 +70,6 @@ on a daily basis, not just DevOps engineers!
 ## 2.TCP/IP
 
 ### What is TCP/IP, and how is it different from OSI?
-
 The OSI model explained above is great for developing a theoretical understanding of a networking stack, but it's challenging
 to implement in practice. Today, we primarily use the Transmission Control Protocol/Internet Protocol (TCP/IP) model. This
 model has a similar layered structure but is simpler and more practical.
@@ -85,4 +84,24 @@ Network, Transport, and Application.
 It's important to keep these differences in mind when dealing with real-world networking scenarios.
 
 ![Networking OSI vs TCP/IP Model](https://github.com/balusena/networking-for-devops/blob/main/01-Networking%20for%20DevOps/osi-vs-tcp-ip.png)
+
+## 3.TCP vs UDP
+The Transport layer of the TCP/IP model utilizes two major protocols: TCP and UDP. It's essential to understand the differences
+between them.
+
+### TCP
+TCP is a connection-oriented protocol, meaning it establishes a link between the source and destination before transmitting
+data. Once the connection is made, TCP breaks down large data sets into smaller packets, sends them across the connection,
+and ensures data integrity throughout the process. TCP is the preferred protocol when data integrity is crucial, such as in
+transactional systems.
+
+### UDP
+UDP, on the other hand, is a connectionless protocol. It begins transmitting data immediately without waiting for a connection
+confirmation from the receiver. While there is a risk of data loss, UDP is often used when speed is more important than perfect
+transmission, such as in voice or video streaming applications.
+
+## Ports and Protocols
+The Transport layer of the TCP/IP model also introduces the concept of ports. Ports are labeled with specific port numbers,
+which are digital identifiers used to match incoming network data with the appropriate process or application on the receiving
+system.
 
