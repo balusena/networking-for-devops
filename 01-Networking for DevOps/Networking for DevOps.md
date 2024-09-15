@@ -105,3 +105,5 @@ The Transport layer of the TCP/IP model also introduces the concept of ports. Po
 which are digital identifiers used to match incoming network data with the appropriate process or application on the receiving
 system.
 
+![Networking Ports Protocols](https://github.com/balusena/networking-for-devops/blob/main/01-Networking%20for%20DevOps/ports-protocols.png)
+
