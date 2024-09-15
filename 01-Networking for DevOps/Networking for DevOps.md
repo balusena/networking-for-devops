@@ -116,7 +116,6 @@ This is why you may often see ports like 8080 for HTTP and 6443 for HTTPS they a
 permissions.
 
 ## 5.IP Subnetting, CIDR
-
 The most critical component of networking is the IP address. Every time you browse the internet, your browser connects to
 a remote server using an IP address. You cannot use the internet or any network without one.
 
@@ -177,7 +176,6 @@ We use tables to help us determine the routes we want to take. This screenshot d
 ![Networking Route Table](https://github.com/balusena/networking-for-devops/blob/main/01-Networking%20for%20DevOps/route-table.png)
 
 ### Routing Decisions
-
 When making a routing decision, more specific rules are evaluated first:
 
 - **Local Network**: If a packet's destination falls within the range `10.21.0.0/16`, it will remain within the local 
@@ -216,7 +214,6 @@ languages until it reaches its final form.
 ### Domains, Zones, and Delegation
 
 ### Domains and Hierarchy
-
 A **domain** is a self-contained network on the internet. Domains can have subdomains, and those subdomains can have their
 own subdomains, creating a hierarchical structure.
 
@@ -230,14 +227,12 @@ domains, while Verisign controls the `.com` domain. Though ICANN oversees the en
 it, specifically the `.com` zone.
 
 ### Delegation
-
 **Delegation** allows an organization that owns a domain to transfer control over a subdomain to another entity. This 
 process is facilitated through **Nameserver (NS) records**. When a domain owner delegates a subdomain, they create an 
 NS record to point to the new owner’s nameservers. This record directs all communications related to that domain to the 
 servers of the new organization, effectively making them the domain owner for that subdomain.
 
 #### Example Scenario
-
 1. ICANN operates root nameservers globally.
 2. Verisign sets up its own nameserver and requests ICANN to delegate the `.com` zone to them.
 3. ICANN creates an NS record pointing to Verisign’s nameserver. Now, any query for a `.com` domain is directed to Verisign’s server.
@@ -251,7 +246,6 @@ This hierarchical and delegated structure allows for efficient management and or
 ![Networking Domains Zones Deligations](https://github.com/balusena/networking-for-devops/blob/main/01-Networking%20for%20DevOps/domains-zones-deligations.png)
 
 ### DNS Record Types
-
 **DNS records**, also known as zone files, contain information about a domain. They provide details such as the IP address
 associated with the domain and instructions on how to handle queries. Each DNS record also includes a **Time-To-Live (TTL)**
 setting, which determines how frequently a DNS server should refresh the record.
