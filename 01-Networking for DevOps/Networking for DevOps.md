@@ -190,4 +190,27 @@ Gateway (TGW) interface (similar to taking state highways).
 applied: `0.0.0.0/0`. This indicates internet traffic, and the packet will be redirected to the Network Address Translation
 (NAT) interface (akin to hopping onto the interstate, like I-95!).
 
+## 7.Domain Name System (DNS)
+
+### DNS Overview
+As previously discussed, computers identify each other using IP addresses, while humans use names. To bridge this gap 
+between human readability and computer communication, the Domain Name System (DNS) converts human-readable domain names
+into computer-friendly IP addresses and vice versa.
+
+Here’s a step-by-step breakdown of how DNS works when you request a web page through a browser:
+
+1. **Client Query**: The client initiates a query to a Recursive Resolver.
+2. **Root Server**: The Recursive Resolver connects to a Root Server.
+3. **TLD Server**: The Root Nameserver responds with the address of a Top Level Domain (TLD) Server (such as `.com` or `.net`).
+4. **TLD Request**: The Recursive Resolver makes a request to the TLD Server.
+5. **Domain Nameserver**: The TLD Server returns the IP address of the Domain Nameserver, which holds information about the requested domain.
+6. **Domain Nameserver Query**: The Recursive Resolver sends a query to the Domain Nameserver.
+7. **IP Address Returned**: The Domain Nameserver provides the IP address of the requested domain to the Recursive Resolver.
+8. **Client Response**: The Recursive Resolver sends the IP address back to the client.
+
+This process is similar to a game of telephone, where information is translated back and forth between computer and human
+languages until it reaches its final form.
+
+
+
 
