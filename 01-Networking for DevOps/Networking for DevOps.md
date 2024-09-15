@@ -211,6 +211,7 @@ Here’s a step-by-step breakdown of how DNS works when you request a web page t
 This process is similar to a game of telephone, where information is translated back and forth between computer and human
 languages until it reaches its final form.
 
+![Networking DNS](https://github.com/balusena/networking-for-devops/blob/main/01-Networking%20for%20DevOps/dns.png)
 
 
 
