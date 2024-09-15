@@ -250,4 +250,41 @@ This hierarchical and delegated structure allows for efficient management and or
 
 ![Networking Domains Zones Deligations](https://github.com/balusena/networking-for-devops/blob/main/01-Networking%20for%20DevOps/domains-zones-deligations.png)
 
+### DNS Record Types
+
+**DNS records**, also known as zone files, contain information about a domain. They provide details such as the IP address
+associated with the domain and instructions on how to handle queries. Each DNS record also includes a **Time-To-Live (TTL)**
+setting, which determines how frequently a DNS server should refresh the record.
+
+### Common DNS Record Types
+
+- **A (Address) Record**: Maps a domain name to an IPv4 address. For example, `example.com` might have an A record pointing
+to `192.0.2.1`.
+
+- **AAAA (IPv6 Address) Record**: Maps a domain name to an IPv6 address. For example, `example.com` might have an AAAA record
+pointing to `2001:db8::1`.
+
+- **CNAME (Canonical Name) Record**: Aliases one domain name to another. For example, `www.example.com` can be set as a CNAME
+for `example.com`, meaning requests for `www.example.com` are redirected to `example.com`.
+
+- **MX (Mail Exchange) Record**: Specifies mail servers for handling email for the domain. For example, `example.com` might
+have an MX record pointing to `mail.example.com` with a priority value.
+
+- **NS (Name Server) Record**: Indicates which DNS servers are authoritative for the domain. For example, `example.com` might
+have NS records pointing to `ns1.example.com` and `ns2.example.com`.
+
+- **PTR (Pointer) Record**: Used for reverse DNS lookups, mapping an IP address to a domain name. For example, a PTR record
+for `192.0.2.1` might point to `example.com`.
+
+- **SOA (Start of Authority) Record**: Provides information about the domain’s zone, including the primary DNS server, the
+domain administrator’s email, the domain’s serial number, and refresh timings.
+
+- **TXT (Text) Record**: Allows for arbitrary text data to be associated with a domain. Commonly used for verification purposes
+and to hold SPF (Sender Policy Framework) data for email authentication.
+
+![Networking DNS Record Types](https://github.com/balusena/networking-for-devops/blob/main/01-Networking%20for%20DevOps/dns-record-types.png)
+
+Each type of DNS record serves a specific purpose and is essential for the proper functioning and management of domains 
+on the internet.
+
 
