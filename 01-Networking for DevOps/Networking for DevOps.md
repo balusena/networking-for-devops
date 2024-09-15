@@ -17,15 +17,14 @@ Mastering these networking concepts and tools will enable you to build robust, s
 a more effective DevOps engineer. This knowledge will not only improve your troubleshooting skills but also enhance your 
 ability to design and maintain complex network infrastructures.
 
-## 1.OSI Model
-
+## 1. OSI Model
 The Open Systems Interconnection (OSI) model is a set of standards that defines how computers communicate over a network.
-In the OSI model, data flow gets broken down into seven layers that build upon each other. Each layer uses data from the
-layer before it and serves a specific purpose in the broader network communication.
+In the OSI model, data transmission is broken down into seven layers, each building upon the one before it. Every layer 
+uses data from the previous layer and serves a specific purpose in the overall process of network communication.
 
-The OSI model works from the bottom up, beginning from layer 1 (Physical) and ending with the top layer 7 (Application).
-The top layer is the most direct point of user interaction with the OSI model—if you’re reading this article on a device,
-you’re working on the 7th layer at this very moment.
+The OSI model operates from the bottom up, starting with layer 1 (Physical) and ending with layer 7 (Application). The 
+top layer is the point where users interact most directly with the network. For example, if you’re reading this content 
+on a device, you're engaging with the 7th layer right now.
 
 ![Networking OSI Model](https://github.com/balusena/networking-for-devops/blob/main/01-Networking%20for%20DevOps/osi-model.png)
 
