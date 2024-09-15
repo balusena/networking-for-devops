@@ -324,3 +324,38 @@ in pop culture references or been on the receiving end of a hyperlink that goes 
 - **300s: Redirects**
 - **400s: Client errors**
 - **500s: Server errors**
+
+## Common HTTP Response Codes
+HTTP response codes are essential for understanding the status of a server's response to a client’s request. They help in
+diagnosing issues and managing the communication between clients and servers. Here are some of the most common HTTP response
+codes you should be familiar with:
+
+![Networking HTTP Response Codes 2](https://github.com/balusena/networking-for-devops/blob/main/01-Networking%20for%20DevOps/http-response-codes-2.png)
+
+### 1xx - Informational
+- **100 Continue**: Indicates that the initial part of a request has been received and the client should continue with the request.
+
+### 2xx - Success
+- **200 OK**: The request was successful, and the server returned the requested resource.
+- **201 Created**: The request was successful, and a new resource was created as a result.
+- **204 No Content**: The request was successful, but there is no content to send in the response.
+
+### 3xx - Redirection
+- **301 Moved Permanently**: The requested resource has been permanently moved to a new URL.
+- **302 Found**: The requested resource has been temporarily moved to a different URL.
+- **304 Not Modified**: The resource has not been modified since the last request, so the client can use its cached version.
+
+### 4xx - Client Error
+- **400 Bad Request**: The server could not understand the request due to invalid syntax.
+- **401 Unauthorized**: The request requires user authentication.
+- **403 Forbidden**: The server understood the request but refuses to authorize it.
+- **404 Not Found**: The server could not find the requested resource.
+- **405 Method Not Allowed**: The request method is not allowed for the requested resource.
+
+### 5xx - Server Error
+- **500 Internal Server Error**: The server encountered an unexpected condition that prevented it from fulfilling the request.
+- **502 Bad Gateway**: The server, while acting as a gateway or proxy, received an invalid response from the upstream server.
+- **503 Service Unavailable**: The server is currently unable to handle the request due to temporary overloading or maintenance.
+- **504 Gateway Timeout**: The server, while acting as a gateway or proxy, did not receive a timely response from the upstream server.
+
+Understanding these response codes is crucial for diagnosing issues and ensuring smooth operation of web services and applications.
