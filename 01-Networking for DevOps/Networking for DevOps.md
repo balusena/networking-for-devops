@@ -295,7 +295,7 @@ it’s important to understand the different HTTP request methods and their purp
 ### Common HTTP Request Methods
 There are 7 main HTTP request methods:
 
-![Networking http-request-methods](https://github.com/balusena/networking-for-devops/blob/main/01-Networking%20for%20DevOps/dns.png)
+![Networking HTTP Request Methods](https://github.com/balusena/networking-for-devops/blob/main/01-Networking%20for%20DevOps/http-request-methods.png)
 
 - **GET**: Retrieves data from a server. For example, when you visit a web page, your browser sends a GET request to retrieve the HTML content of that page.
 
