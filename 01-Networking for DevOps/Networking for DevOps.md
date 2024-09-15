@@ -394,3 +394,50 @@ categorized into four general contexts:
   - `Last-Modified`: Provides the date and time at which the resource was last modified.
 
 Understanding these HTTP headers is crucial for handling and managing web requests and responses effectively.
+
+## 9.Network Troubleshooting Tools
+
+### 1.ping
+
+The easiest tool to test network connections is `ping`. It uses the ICMP protocol’s ECHO_REQUEST datagram to obtain an 
+ICMP ECHO_RESPONSE from a remote host. The `ping` command is integrated into all versions of Windows, so you just need 
+to open your command prompt or application to start using it.
+
+To troubleshoot using `ping`, first run it on your own network (the local host) to ensure that your network interface is
+working. Simply open the command prompt and type `ping www.google.com`. As you continue troubleshooting, you can ping hosts
+and gateways further along the network to diagnose the location of connectivity problems.
+
+When you ping, you receive information back, including the percentage of lost packets and average round-trip latency.
+
+### traceroute
+
+Sometimes a network is particularly slow, and you need to track the routes of your packets or identify which gateway is 
+causing delays. This can be challenging to do manually, which is where the `traceroute` command comes in handy.
+
+`traceroute` (sometimes written as `tracert`) is a diagnostic command that shows possible routes across an IP network and
+calculates any transit delays along that route. While `ping` only shows a final round-trip time for packets to go from host
+to destination and back, `traceroute` calculates the total time spent establishing a connection by adding up the round-trip
+times for each subsequent node along a given route.
+
+The goal of `traceroute` for troubleshooting is to send User Datagram Protocol (UDP) probes with increasing Time to Live
+(TTL) values until the Internet Control Message Protocol (ICMP) returns a “time exceeded” message. This message indicates
+that the packet has reached a router along the route. The TTL is increased by one each time until the “port unavailable” 
+message is received, signaling either the end of the destination or that the maximum TTL has been reached.
+
+The probes start by sending a packet with TTL=1. Each time a packet hits a router, it lowers the TTL by 1. When you receive
+a time exceeded message, it means TTL has reached 0, and you have reached another stop along the route. The TTL is incremented
+by one each time, gradually revealing each hop along the route until the destination is found or the maximum number of hops
+is hit. 
+
+The report you receive includes:
+- The Time to Live
+- The IP addresses of each stop in the route—each gateway that has responded to the probe
+- The round-trip time for each router along the route
+
+This information is valuable for determining the exact route and troubleshooting any speed or network issues. Additionally,
+`traceroute` marks any router on the route that does not respond within the time limit with an asterisk (*), helping you
+pinpoint where to focus your troubleshooting efforts.
+
+**Here’s an example of a report output from a traceroute command. Take a close look at it.**
+
+![Networking Traceroute](https://github.com/balusena/networking-for-devops/blob/main/01-Networking%20for%20DevOps/traceroute.png)
