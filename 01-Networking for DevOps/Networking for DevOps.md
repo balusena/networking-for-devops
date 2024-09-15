@@ -27,7 +27,7 @@ The OSI model works from the bottom up, beginning from layer 1 (Physical) and en
 The top layer is the most direct point of user interaction with the OSI model—if you’re reading this article on a device,
 you’re working on the 7th layer at this very moment.
 
-
+![Networking OSI Model](https://github.com/balusena/networking-for-devops/blob/main/01-Networking%20for%20DevOps/osi-model.png)
 
 
 
