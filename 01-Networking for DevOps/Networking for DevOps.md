@@ -359,3 +359,38 @@ codes you should be familiar with:
 - **504 Gateway Timeout**: The server, while acting as a gateway or proxy, did not receive a timely response from the upstream server.
 
 Understanding these response codes is crucial for diagnosing issues and ensuring smooth operation of web services and applications.
+
+### HTTP Headers
+
+HTTP headers are used to pass additional information between clients and servers. They provide essential details for various
+purposes, such as authentication, caching, and specifying the type of client device sending the request. HTTP headers are
+categorized into four general contexts:
+
+### General Header
+- **Definition**: Headers that apply to both request and response messages.
+- **Examples**:
+  - `Date`: Specifies the date and time at which the message was sent.
+  - `Connection`: Controls whether the connection should be kept alive or closed after the completion of the request/response.
+
+### Request Header
+- **Definition**: Headers that are included in request messages sent from a client to a server.
+- **Examples**:
+  - `Authorization`: Contains credentials for authenticating the client to the server.
+  - `Accept`: Specifies the media types that the client is willing to receive from the server.
+  - `User-Agent`: Provides information about the client’s software and operating system.
+
+### Response Header
+- **Definition**: Headers that are included in response messages sent from a server to a client.
+- **Examples**:
+  - `Location`: Redirects the client to a different URL (used with status codes like 301 and 302).
+  - `Server`: Provides information about the server software that handled the request.
+  - `WWW-Authenticate`: Indicates how the client should authenticate to access the resource (used with status codes like 401).
+
+### Entity Header
+- **Definition**: Headers that provide information about the entity (resource) itself or the resource requested.
+- **Examples**:
+  - `Content-Type`: Specifies the media type of the resource (e.g., `text/html`, `application/json`).
+  - `Content-Length`: Indicates the size of the response body in bytes.
+  - `Last-Modified`: Provides the date and time at which the resource was last modified.
+
+Understanding these HTTP headers is crucial for handling and managing web requests and responses effectively.
