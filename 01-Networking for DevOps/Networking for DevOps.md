@@ -100,7 +100,7 @@ UDP, on the other hand, is a connectionless protocol. It begins transmitting dat
 confirmation from the receiver. While there is a risk of data loss, UDP is often used when speed is more important than perfect
 transmission, such as in voice or video streaming applications.
 
-## Ports and Protocols
+## 4.Ports and Protocols
 The Transport layer of the TCP/IP model also introduces the concept of ports. Ports are labeled with specific port numbers,
 which are digital identifiers used to match incoming network data with the appropriate process or application on the receiving
 system.
@@ -114,3 +114,56 @@ whenever possible.
 
 This is why you may often see ports like 8080 for HTTP and 6443 for HTTPS they are non-privileged and don't require root
 permissions.
+
+## 5.IP Subnetting, CIDR
+
+The most critical component of networking is the IP address. Every time you browse the internet, your browser connects to
+a remote server using an IP address. You cannot use the internet or any network without one.
+
+An IP address is a 32-bit number divided into four 8-bit sections called octets. It can be represented in both decimal and
+binary formats. An IP address may contain a subnetwork (subnet) that’s different from the host. The address comes with a
+subnet mask, which distinguishes the part of the IP address that is the network and the part that is the host address.
+
+For example, given an IP address of `192.168.12.20` with the subnet mask of `255.255.255.0`, `192.168.12` represents the
+network address, and `.20` represents the host address. This concept of a subnet mask leads us to classful addressing, 
+where IP addresses are divided into five subclasses.
+
+### Classful Addressing
+In classful addressing, IP addresses have an 8-bit, 16-bit, or 24-bit network prefix:
+
+- **Class A**: 8-bit network ID, 24-bit host ID, over 16 million addresses.
+- **Class B**: 16-bit network and host IDs, 65,535 addresses.
+- **Class C**: 24-bit network ID, 8-bit host ID, 254 addresses.
+
+When allocating IP addresses, it's important to consider the size of your network. For large or small networks, it's 
+straightforward to select the correct class. However, problems arise with medium-sized networks, where you might need 
+more than 254 addresses (Class C) but fewer than 65,535 (Class B).
+
+### Example Scenario
+Let’s assume you need 1,000 addresses for your network. Since 1,000 is more than 254, you'd traditionally choose Class B.
+However, this results in 64,000 unused addresses, which is inefficient. One alternative could be using multiple Class C 
+ranges, but this complicates routing by having many small networks.
+
+To solve this issue, we use **Classless Inter-Domain Routing (CIDR)**.
+
+### Classless Inter-Domain Routing (CIDR)
+CIDR eliminates the rigid class structure by allowing network administrators to move the subnet boundary anywhere within
+the parent network. In other words, we are no longer restricted to 8-bit, 16-bit, or 24-bit subnet masks.
+
+Let’s revisit our example. Imagine you need 300 hosts but have an address range that supports only 254. Traditionally, 
+you'd need two Class C networks, but this complicates routing. With CIDR, you can adjust the subnet mask to fit your 
+needs. By decreasing the subnet mask bits by one, you create a network that supports 510 hosts—much more efficient!
+
+### Common IP Addresses and Subnet Masks
+
+| IP Address Range | Subnet Mask   | Host Count |
+|------------------|---------------|------------|
+| 192.168.0.0/24   | 255.255.255.0 | 254        |
+| 192.168.0.0/23   | 255.255.254.0 | 510        |
+| 192.168.0.0/22   | 255.255.252.0 | 1022       |
+
+This table outlines common address ranges, subnet masks, and the number of hosts they support.
+
+![Networking CIDR ](https://github.com/balusena/networking-for-devops/blob/main/01-Networking%20for%20DevOps/cidr.png)
+
+
