@@ -155,8 +155,9 @@ you'd need two Class C networks, but this complicates routing. With CIDR, you ca
 needs. By decreasing the subnet mask bits by one, you create a network that supports 510 hosts—much more efficient!
 
 ### Common IP Addresses and Subnet Masks
+The table below outlines the most common combination of addresses and netmasks and important details about them.
 
 ![Networking CIDR ](https://github.com/balusena/networking-for-devops/blob/main/01-Networking%20for%20DevOps/cidr.png)
 
-The table below outlines the most common combination of addresses and netmasks and important details about them.
+
 
