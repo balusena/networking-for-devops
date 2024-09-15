@@ -107,3 +107,10 @@ system.
 
 ![Networking Ports Protocols](https://github.com/balusena/networking-for-devops/blob/main/01-Networking%20for%20DevOps/ports-protocols.png)
 
+While many ports are non-privileged meaning anyone can use them without special permissions some require root access. 
+Ports 1-1023 are known as "well-known ports" and require root permissions for a server to listen on them. It's a good 
+practice to avoid running web servers as root, assign minimal permissions to services, and use non-privileged ports 
+whenever possible. 
+
+This is why you may often see ports like 8080 for HTTP and 6443 for HTTPS they are non-privileged and don't require root
+permissions.
