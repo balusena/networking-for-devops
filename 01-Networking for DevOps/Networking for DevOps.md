@@ -318,3 +318,9 @@ Response codes indicate whether a request was completed successfully or failed. 
 in pop culture references or been on the receiving end of a hyperlink that goes nowhere.
 
 ![Networking HTTP Response Codes](https://github.com/balusena/networking-for-devops/blob/main/01-Networking%20for%20DevOps/http-response-codes.png)
+
+### There are 4 categories of HTTP responses:
+- **200s: Successful responses**
+- **300s: Redirects**
+- **400s: Client errors**
+- **500s: Server errors**
