@@ -313,5 +313,8 @@ There are 7 main HTTP request methods:
 
 Understanding these HTTP methods helps in designing, debugging, and managing web services and applications. Each method serves a specific purpose and impacts how data is exchanged between clients and servers.
 
+### HTTP Response Codes
+Response codes indicate whether a request was completed successfully or failed. You’ve probably seen them floating around
+in pop culture references or been on the receiving end of a hyperlink that goes nowhere.
 
-
+![Networking HTTP Response Codes](https://github.com/balusena/networking-for-devops/blob/main/01-Networking%20for%20DevOps/http-response-codes.png)
