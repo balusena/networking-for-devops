@@ -282,4 +282,36 @@ and to hold SPF (Sender Policy Framework) data for email authentication.
 Each type of DNS record serves a specific purpose and is essential for the proper functioning and management of domains 
 on the internet.
 
+## 8.HTTP
+
+### HTTP Methods
+You’ve likely encountered Hypertext Transfer Protocol (HTTP) in your work. HTTP is crucial for interacting with web pages,
+HTML documents, and APIs. It forms the backbone of data exchange on the internet, and a solid understanding of HTTP is 
+essential for any DevOps engineer.
+
+An **HTTP request** is a message sent from a client to a server to request access to a resource. As a DevOps engineer, 
+it’s important to understand the different HTTP request methods and their purposes.
+
+### Common HTTP Request Methods
+There are 7 main HTTP request methods:
+
+![Networking http-request-methods](https://github.com/balusena/networking-for-devops/blob/main/01-Networking%20for%20DevOps/dns.png)
+
+- **GET**: Retrieves data from a server. For example, when you visit a web page, your browser sends a GET request to retrieve the HTML content of that page.
+
+- **POST**: Submits data to a server to create or update a resource. For example, submitting a form on a website sends a POST request with the form data to the server.
+
+- **PUT**: Updates an existing resource on the server or creates a new resource if it does not exist. For example, sending a PUT request to update a user's profile information.
+
+- **DELETE**: Removes a resource from the server. For example, sending a DELETE request to remove a user account.
+
+- **HEAD**: Similar to GET but only retrieves the headers of a resource, not the resource itself. Useful for checking if a resource exists or if it has been modified.
+
+- **OPTIONS**: Describes the communication options for the target resource. It is often used to determine what HTTP methods are supported by the server.
+
+- **PATCH**: Partially updates a resource. Unlike PUT, which updates the entire resource, PATCH is used to apply partial modifications.
+
+Understanding these HTTP methods helps in designing, debugging, and managing web services and applications. Each method serves a specific purpose and impacts how data is exchanged between clients and servers.
+
+
 
