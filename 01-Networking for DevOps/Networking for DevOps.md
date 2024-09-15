@@ -172,4 +172,8 @@ country road trip, you’ll hop onto the interstate.
 Routing works the same way: based on the destination, different routes are chosen to ensure the packet reaches the correct
 location efficiently.
 
+We use tables to help us determine the routes we want to take. This screenshot demonstrates a typical route table in AWS:
+
+![Networking Route Table](https://github.com/balusena/networking-for-devops/blob/main/01-Networking%20for%20DevOps/route-table.png)
+
 
