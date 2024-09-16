@@ -709,6 +709,15 @@ First, let’s find out the IP of our server and the IP range of our network usi
 ![Networking IFCONFIG](https://github.com/balusena/networking-for-devops/blob/main/01-Networking%20for%20DevOps/ifconfig.png)
 
 Now that we know this information, we can initiate a nmap ping scan using the following command:
+```
+$ nmap -sn 172.31.44.35/20
+```
+![Networking NMAP-1](https://github.com/balusena/networking-for-devops/blob/main/01-Networking%20for%20DevOps/nmap-1.png)
 
-![Networking NMAP](https://github.com/balusena/networking-for-devops/blob/main/01-Networking%20for%20DevOps/nmap-1.png)
+We can see now that there are 15 hosts in the specified subnet.
 
+Let’s test one of these hosts and find out which ports it is listening to. You can do this using the command below:
+```
+$ nmap -A 172.31.36.237
+```
+![Networking NMAP-2](https://github.com/balusena/networking-for-devops/blob/main/01-Networking%20for%20DevOps/nmap-2.png)
