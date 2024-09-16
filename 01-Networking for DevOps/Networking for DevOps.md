@@ -632,6 +632,11 @@ dig google.com. In the ANSWER section of the response, you get a number of piece
 - Query class (IN= internet)
 - Query type (A= address)
 - The IP address for the queried domain (172.217.0.46)
-
 So there you have it the google.com DNS record is associated with the IP address 172.217.0.46.
+
+![Networking Dig DNS](https://github.com/balusena/networking-for-devops/blob/main/01-Networking%20for%20DevOps/dig-dns.png)
+
+Like with curl, the dig has a default method. By default, dig will attempt to query each server specified using the 
+/etc/resolv.conf file, the automatic file type for configuring DNS name servers. But in some cases, you may want to send
+queries to a specific DNS server. You can do this with the @ flag.
 
