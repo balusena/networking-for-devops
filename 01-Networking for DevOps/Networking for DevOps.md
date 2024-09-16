@@ -745,3 +745,9 @@ The basic syntax to launch SSH is:
 
 After you run the command, the remote server will ask you to provide a password. This is a basic authentication option. 
 However, the more secure best practice is to use a passwordless option whenever possible.
+
+### 9.scp
+The final command that you’ll find helpful is SCP (Secure Copy Protocol). SCP is a similarly secure way to execute actions between a local and remote host, but instead of connecting to a server and executing commands, it transfers files.
+
+See below the syntax for SCP:
+![Networking SCP](https://github.com/balusena/networking-for-devops/blob/main/01-Networking%20for%20DevOps/scp.png)
