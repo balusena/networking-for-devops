@@ -757,7 +757,7 @@ Consider each section of this guide as a distinct tool in your DevOps toolbox. E
 and use case. As a DevOps engineer, you’ll often encounter tasks that require networking knowledge. Understanding what each
 tool does and grasping the basics of networking will help you determine the best approach to accomplish your tasks.
 
-### Quick Overview of What You Learned
+### Quick Overview of What We Learned
 1. **Networking Skills for DevOps Engineers**
    - Networking skills are essential for DevOps engineers.
 
