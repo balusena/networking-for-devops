@@ -398,7 +398,6 @@ Understanding these HTTP headers is crucial for handling and managing web reques
 ## 9.Network Troubleshooting Tools
 
 ### 1.ping
-
 The easiest tool to test network connections is `ping`. It uses the ICMP protocol’s ECHO_REQUEST datagram to obtain an 
 ICMP ECHO_RESPONSE from a remote host. The `ping` command is integrated into all versions of Windows, so you just need 
 to open your command prompt or application to start using it.
@@ -407,10 +406,11 @@ To troubleshoot using `ping`, first run it on your own network (the local host) 
 working. Simply open the command prompt and type `ping www.google.com`. As you continue troubleshooting, you can ping hosts
 and gateways further along the network to diagnose the location of connectivity problems.
 
+![Networking Ping](https://github.com/balusena/networking-for-devops/blob/main/01-Networking%20for%20DevOps/ping.png)
+
 When you ping, you receive information back, including the percentage of lost packets and average round-trip latency.
 
 ### 2.traceroute
-
 Sometimes a network is particularly slow, and you need to track the routes of your packets or identify which gateway is 
 causing delays. This can be challenging to do manually, which is where the `traceroute` command comes in handy.
 
@@ -453,7 +453,6 @@ the path that packets take across the network. This happens in the report sample
 Overall, though, `traceroute` is a commonly used diagnostic tool and one that you will use often in your DevOps career.
 
 ### 3.Telnet
-
 One important caveat to tools like `ping` and `traceroute` is that a server responding to these tools does not necessarily
 mean that it is fully operational.
 
@@ -476,3 +475,6 @@ Despite this, `telnet` remains useful for testing whether one host can establish
 For example, to test the connection to `google.com` on port 443 using `telnet`, you would use the following command:
 
 ![Networking Telnet](https://github.com/balusena/networking-for-devops/blob/main/01-Networking%20for%20DevOps/telnet.png)
+
+As you can see above, the command succeeded, which means that a connection is allowed between our local machine and a remote
+system on a given port.
