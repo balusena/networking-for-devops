@@ -686,3 +686,25 @@ Other `netstat` flag commands include:
 - `-f`: Provide all names of foreign connections whenever possible.
 - `-o`: Show the process ID.
 - `-r`: Display the routing table.
+
+### 7.nmap
+The next tool to become familiar with as a DevOps engineer is nmap. nmap, or “network mapper”, is also a free, open-source
+tool like netstat. A use case for nmap is almost identical to that for netstat, with one minor difference. When you’re using
+netstat, you have to log into a server. But nmap scans all servers in a network.
+
+nmap sends raw IP packets to determine the hosts available on a given network, what services are offered by these hosts,
+and what operating systems they are running. System administrators use nmap for tasks such as network inventory and security
+audits—sometimes known as “white hat” hacking because it identifies vulnerabilities in order to secure and resolve them. 
+However, this tool is also widely used by “black hat” hackers, who use the information provided to exploit vulnerabilities
+in the network. Because of this potential, some cloud providers do not allow nmap to run on their networks.
+
+In many ways, DevOps engineers are white hat hackers—troubleshooters, security protectors, and network experts. To demonstrate
+how nmap can be useful for us, let’s go through a simple scenario.
+
+Assume we gained SSH (Secure Shell Protocol) access to an unknown server. Our goal is to find out what else is running on the
+network.
+
+First, let’s find out the IP of our server and the IP range of our network using our address.
+
+![Networking IFCONFIG](https://github.com/balusena/networking-for-devops/blob/main/01-Networking%20for%20DevOps/ifconfig.png)
+
