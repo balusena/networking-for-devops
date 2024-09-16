@@ -536,4 +536,6 @@ ubuntu@balasenapathi:~$ curl http://example.com
 </body>
 </html>
 ```
-This will send an HTTP GET request to the example.com host.
+This will send an HTTP GET request to the example.com host.This is the HTML content of the "Example Domain" website at 
+http://example.com, which is commonly used for testing purposes. The website displays a simple message and a link for 
+more information.
