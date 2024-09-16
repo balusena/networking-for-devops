@@ -539,3 +539,78 @@ ubuntu@balasenapathi:~$ curl http://example.com
 This will send an HTTP GET request to the example.com host.This is the HTML content of the "Example Domain" website at 
 http://example.com, which is commonly used for testing purposes. The website displays a simple message and a link for 
 more information.
+
+If you’re checking an exact response code and only want to see response headers, you can use curl -I. The syntax looks 
+like this in our example:
+```
+ubuntu@balasenapathi:~$ curl -I http://example.com
+HTTP/1.1 200 OK
+Age: 599837
+Cache-Control: max-age=604800
+Content-Type: text/html; charset=UTF-8
+Date: Mon, 09 Sep 2024 09:23:17 GMT
+Expires: Mon, 16 Sep 2024 09:23:17 GMT
+Last-Modified: Thu, 09 Aug 2018 15:35:29 GMT
+Server: ECS (nyb/1D2E)
+Vary: Accept-Encoding
+X-Cache: HIT
+Content-Length: 1256
+```
+This output gives you metadata about the response, such as the HTTP status code (200 OK), the Content-Type, the server 
+details, and caching information, but it does not display the HTML content of the page.
+
+By default, curl uses the HTTP GET method. If you wanted to use another method to return a certain type of response, you
+can use the -X flag in your curl command followed by the type of request that you want. For example,
+
+Running the command curl -X POST http://example.com would send a POST request to http://example.com. However, since 
+http://example.com doesn't accept POST requests (it's a static page used for testing), you would typically receive a 
+response indicating that the method is not allowed.
+```
+ubuntu@balasenapathi:~$ curl -X POST http://example.com
+<html>
+<head>
+<title>405 Method Not Allowed</title>
+</head>
+<body>
+<center><h1>405 Method Not Allowed</h1></center>
+<hr><center>nginx</center>
+</body>
+</html>
+```
+The status code 405 Method Not Allowed tells you that the server does not support POST requests to this URL. The specific
+format of the response can vary depending on the server configuration.
+
+In this case, the curl -X POST http://example.com command sends an HTTP POST request (which is typically used for submitting
+data or making changes to a resource), but since http://example.com does not support POST requests, the server responds 
+with an error.
+
+curl is the master of data transfer, and we can even download files/store a file’s response with curl by using the -o flag
+Syntax for this may look something like this:
+```
+ubuntu@balasenapathi:~$ curl http://example.com/maile -o output.file.
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+curl: (22) The requested URL returned error: 404 Not Found
+```
+since the URL http://example.com/maile doesn't exist (it's a non-existent path), you will likely receive a 404 Not Found error.
+The command will still attempt to save the response (the error page) in output.file. The exact output on the terminal will look
+something like this:
+```
+ubuntu@balasenapathi:~$ cat output.file
+<!doctype html>
+<html>
+<head>
+    <title>404 Not Found</title>
+</head>
+<body>
+    <h1>Not Found</h1>
+    <p>The requested URL /maile was not found on this server.</p>
+</body>
+</html>
+```
+This indicates that the resource /maile does not exist on the example.com server.
+
+There are other curl commands, too. Explore curl more deeply on the site for the curl project, where you’ll find a plethora
+of helpful (and totally free) resources. Once you’re familiar with the tool, you’ll be able to use it to accomplish a number
+of programming tasks.
