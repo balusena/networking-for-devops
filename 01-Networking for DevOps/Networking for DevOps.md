@@ -708,3 +708,7 @@ First, let’s find out the IP of our server and the IP range of our network usi
 
 ![Networking IFCONFIG](https://github.com/balusena/networking-for-devops/blob/main/01-Networking%20for%20DevOps/ifconfig.png)
 
+Now that we know this information, we can initiate a nmap ping scan using the following command:
+
+![Networking NMAP](https://github.com/balusena/networking-for-devops/blob/main/01-Networking%20for%20DevOps/nmap-1.png)
+
