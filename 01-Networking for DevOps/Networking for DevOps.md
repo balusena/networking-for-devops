@@ -668,3 +668,12 @@ ubuntu@balasenapathi:~$ dig -t TXT google.com
 
 Dig is a great tool for DevOps engineers to have in their toolbox because it helps you troubleshoot for your name servers,
 double-check records, and trace IP addresses and their domain names, among other things.
+
+### 6.netstat
+netstat is a command that shows you specific information about the communications between your local machine and other 
+machines/devices on the network. Netstat shows active TCP connections as well as ports on which the server is listening.
+It is useful when you need to see which network services are running on a local machine.
+
+In the example below, we can discover that there is an apache web server listening on the default HTTP port.
+
+![Networking NETSTAT](https://github.com/balusena/networking-for-devops/blob/main/01-Networking%20for%20DevOps/netstat.png)
