@@ -721,3 +721,11 @@ Let’s test one of these hosts and find out which ports it is listening to. You
 $ nmap -A 172.31.36.237
 ```
 ![Networking NMAP-2](https://github.com/balusena/networking-for-devops/blob/main/01-Networking%20for%20DevOps/nmap-2.png)
+
+The nmap command helps us see that the there is an SSH and HTTP processes listening to ports on this server.
+
+Since we know that a curl is a great tool for HTTP, we can then try obtaining the webpage using curl.
+
+![Networking CURL](https://github.com/balusena/networking-for-devops/blob/main/01-Networking%20for%20DevOps/curl.png)
+
+Or we can establish an ssh connection, another portocol which is used multiple times throught a typical day in life of a DevOps engineer.
