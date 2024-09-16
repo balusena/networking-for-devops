@@ -728,4 +728,20 @@ Since we know that a curl is a great tool for HTTP, we can then try obtaining th
 
 ![Networking CURL](https://github.com/balusena/networking-for-devops/blob/main/01-Networking%20for%20DevOps/curl.png)
 
-Or we can establish an ssh connection, another portocol which is used multiple times throught a typical day in life of a DevOps engineer.
+Or we can establish an ssh connection, another portocol which is used multiple times throught a typical day in life of a
+DevOps engineer.
+
+### 8.ssh
+SSH stands for Secure Socket Shell, or just Secure Shell. It’s a network protocol that allows you to log into remote machines
+and execute commands on them. When you’re logging into remote machines, you can’t always trust the network that you’re using
+to do so. SSH makes this process safer by encrypting all data, allowing secure communications via an untrusted network. This
+us hekoful when you’re working with sensitive information (yours or a client’s) or need to troubleshoot an unfamiliar network.
+
+The basic syntax to launch SSH is:
+
+[ssh] [user_name@hostname] or [ssh] [user_name@ipaddress]
+
+![Networking SSH](https://github.com/balusena/networking-for-devops/blob/main/01-Networking%20for%20DevOps/ssh.png)
+
+After you run the command, the remote server will ask you to provide a password. This is a basic authentication option. 
+However, the more secure best practice is to use a passwordless option whenever possible.
