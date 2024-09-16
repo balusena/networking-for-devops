@@ -677,3 +677,14 @@ It is useful when you need to see which network services are running on a local 
 In the example below, we can discover that there is an apache web server listening on the default HTTP port.
 
 ![Networking NETSTAT](https://github.com/balusena/networking-for-devops/blob/main/01-Networking%20for%20DevOps/netstat.png)
+
+### Netstat Flag Commands
+
+In the above example, the command `netstat -lp` shows only listening servers (`-l` flag) and their program name (`-p` flag).
+Other `netstat` flag commands include:
+
+- `-a`: Show all active ports.
+- `-n`: Display only numerical IP addresses and ports.
+- `-f`: Provide all names of foreign connections whenever possible.
+- `-o`: Show the process ID.
+- `-r`: Display the routing table.
