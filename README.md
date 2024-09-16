@@ -1,6 +1,6 @@
 # Networking for DevOps
 
-![Networking](https://github.com/balusena/ansible-for-devops/blob/main/networking.png)
+![Networking](https://github.com/balusena/networking-for-devops/blob/main/networking.png)
 
 Welcome to the **Networking for DevOps** repository! This resource provides a thorough introduction to essential networking
 concepts crucial for DevOps professionals. 
