@@ -614,3 +614,24 @@ This indicates that the resource /maile does not exist on the example.com server
 There are other curl commands, too. Explore curl more deeply on the site for the curl project, where you’ll find a plethora
 of helpful (and totally free) resources. Once you’re familiar with the tool, you’ll be able to use it to accomplish a number
 of programming tasks.
+
+### 5.dig
+The next tool to learn is "dig", not “how to dig”, but just "dig" – which stands for Domain Information Groper.
+
+It is used for troubleshooting Domain Name System (DNS) problems and verifying DNS records. dig performs DNS Lookups and
+then shows you the answers returned from the name server(s).
+
+The basic syntax of dig for a DNS record lookup is [dig] [domain name]. This will make an NS query and return the "A record"
+Address record for a given domain name.
+
+Let's break down this example by looking up the DNS record for the domain google.com. At the top, you can see the request: 
+dig google.com. In the ANSWER section of the response, you get a number of pieces of information:
+
+**The queried server (google.com)**
+- TTL ( in this case 93)
+- Query class (IN= internet)
+- Query type (A= address)
+- The IP address for the queried domain (172.217.0.46)
+
+So there you have it the google.com DNS record is associated with the IP address 172.217.0.46.
+
