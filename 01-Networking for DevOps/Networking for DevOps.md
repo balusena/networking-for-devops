@@ -751,3 +751,59 @@ The final command that you’ll find helpful is SCP (Secure Copy Protocol). SCP 
 
 See below the syntax for SCP:
 ![Networking SCP](https://github.com/balusena/networking-for-devops/blob/main/01-Networking%20for%20DevOps/scp.png)
+
+## 10.Putting the Toolbox Together
+Consider each section of this guide as a distinct tool in your DevOps toolbox. Each tool has a specific design, function,
+and use case. As a DevOps engineer, you’ll often encounter tasks that require networking knowledge. Understanding what each
+tool does and grasping the basics of networking will help you determine the best approach to accomplish your tasks.
+
+### Quick Overview of What You Learned
+1. **Networking Skills for DevOps Engineers**
+   - Networking skills are essential for DevOps engineers.
+
+2. **OSI Model**
+   - The OSI model has 7 layers, each building upon the previous one.
+   - While understanding the OSI model is useful, it can be complex. The TCP/IP model simplifies this by consolidating 
+   some layers and is primarily used.
+
+3. **TCP vs. UDP**
+   - **TCP**: A connection-oriented protocol in the transport layer, used for reliable communication and security.
+   - **UDP**: A connectionless protocol in the transport layer, used for speed.
+
+4. **TCP Ports**
+   - TCP ports use numerical identifiers to direct commands to the appropriate process.
+
+5. **IP Addresses**
+   - IP addresses are crucial for internet connectivity. They consist of host and network components, separated by a subnet mask.
+   - There are 5 classes of IP addresses, each with different prefix lengths and address quantities.
+
+6. **Classless Interdomain Routing (CIDR)**
+   - CIDR addresses the inefficiencies in IP address allocation by removing fixed class boundaries, allowing for more flexible
+    address distribution.
+
+7. **Routing**
+   - Routing involves directing information across a network.
+
+8. **DNS (Domain Name System)**
+   - DNS translates domain names into IP addresses, enabling network communication. You can perform lookups to find the 
+   IP address associated with a domain name.
+
+9. **Domain Ownership and Delegation**
+   - Domains are owned, but ownership can be delegated for specific subdomains.
+
+10. **HTTP**
+    - HTTP facilitates interaction with web pages and files over a network by sending requests and receiving status codes
+     indicating the result.
+
+11. **Network Troubleshooting Tools**
+    - Several tools are useful for troubleshooting networks:
+      - **Ping**: Tests connectivity to a host.
+      - **Traceroute**: Traces the path data takes to reach a destination.
+      - **Telnet**: Tests connectivity and communication with a specific port.
+      - **Curl**: Transfers data to or from a server, useful for debugging HTTP requests.
+      - **Dig**: Performs DNS lookups.
+      - **Netstat**: Displays network connections and listening ports.
+      - **Nmap**: Scans networks and ports to discover devices and services.
+      - **SSH**: Securely accesses remote systems.
+
+Each of these tools has a specific syntax and purpose, making them invaluable for network troubleshooting and management.
