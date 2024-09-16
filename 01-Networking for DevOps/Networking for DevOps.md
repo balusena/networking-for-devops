@@ -325,7 +325,7 @@ in pop culture references or been on the receiving end of a hyperlink that goes 
 - **400s: Client errors**
 - **500s: Server errors**
 
-## Common HTTP Response Codes
+### Common HTTP Response Codes
 HTTP response codes are essential for understanding the status of a server's response to a client’s request. They help in
 diagnosing issues and managing the communication between clients and servers. Here are some of the most common HTTP response
 codes you should be familiar with:
@@ -361,7 +361,6 @@ codes you should be familiar with:
 Understanding these response codes is crucial for diagnosing issues and ensuring smooth operation of web services and applications.
 
 ### HTTP Headers
-
 HTTP headers are used to pass additional information between clients and servers. They provide essential details for various
 purposes, such as authentication, caching, and specifying the type of client device sending the request. HTTP headers are
 categorized into four general contexts:
@@ -679,7 +678,6 @@ In the example below, we can discover that there is an apache web server listeni
 ![Networking NETSTAT](https://github.com/balusena/networking-for-devops/blob/main/01-Networking%20for%20DevOps/netstat.png)
 
 ### Netstat Flag Commands
-
 In the above example, the command `netstat -lp` shows only listening servers (`-l` flag) and their program name (`-p` flag).
 Other `netstat` flag commands include:
 
